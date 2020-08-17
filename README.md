@@ -1,9 +1,12 @@
+edit-readme
 # chat-space DB設計
 ## users テーブル
+master
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, add_index: true|
 |email|string|null: false, unique: true|
+edit-readme
 |password|string|null: false, unique: true|
 |password confirmation|string|null: false, unique: true|
 ### Association
@@ -39,3 +42,12 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
+=======
+|password|string|null: false|
+|password confirmation|string|null: false|
+
+### Association
+- has_many :messages
+- has_many :members
+- has_many :groups,through: members 
+master
