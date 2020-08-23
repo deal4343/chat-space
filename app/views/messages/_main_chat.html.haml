@@ -1,0 +1,41 @@
+.main_chat
+  .main-header
+    .main-header__group
+      .main-header__groupname
+        test
+      .main-header__memberlist
+        member: username
+
+    = link_to '#', class:"main-header__editbutton" do
+      Edit
+
+  .main-message
+    .message-field
+      .message-box
+        .message-info
+          .message-info__username
+            masa
+          .message-info__date
+            2020/08/23(Sun) 15:36:17
+        .message-text__box
+          .message__text
+            ありがとう
+
+      .message-box
+        .message-info
+          .message-info__username
+            masa
+          .message-info__date
+            2020/08/23(Sun) 15:37:22
+        .message-text__box
+          .message__text
+            ありがとう
+
+  .main-footer
+    %form.new_message
+      .input-box
+        %input{type:"text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class:"input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
